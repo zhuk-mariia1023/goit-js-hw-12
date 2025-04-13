@@ -1,0 +1,131 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+
+.form {
+  margin: auto;
+  margin-top: 40px;
+}
+
+form input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  padding: 8px;
+  padding-left: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+
+  outline: none;
+
+  margin-right: 8px;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+form input:hover {
+  border: 1px solid #000000;
+}
+
+form input:focus {
+  border: 1px solid #4e75ff;
+  color: #000000;
+}
+
+form button {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-align: center;
+
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 0;
+  min-width: 91px;
+  height: 40px;
+
+  background-color: #4e75ff;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  max-width: 1128px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.gallery-item img {
+  width: 360px;
+  height: 200px;
+  display: block;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px;
+  text-align: center;
+}
+
+.info-item .label {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info-item .value {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.loader {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.loader.show {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
